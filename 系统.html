@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>系统类应用 &mdash; ShellGui 手册 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
+        <link rel="next" title="网络类应用" href="网络.html"/>
+        <link rel="prev" title="从这里开始" href="gettingstarted.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ShellGui 手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">从这里开始</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">系统类应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-status(系统状态)">系统状态</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">系统运行状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">网络状态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-home(应用程序)">应用程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">导航栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">防火墙</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#telnet">Telnet 服务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">启用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">端口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">固件升级</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">恢复出厂设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">升级固件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">消息</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">电子邮件设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">抄送</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">电子邮件测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">磁盘管理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">磁盘管理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">系统信息</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">系统信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">时间设置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">系统用户</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">系统用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">编辑用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">编辑用户组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">管理用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">管理用户组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">添加用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">添加用户组</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="网络.html">网络类应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="防火墙.html">防火墙类应用</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ShellGui 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>系统类应用</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/系统.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>系统类应用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setting-status(系统状态)">
+<span id="id2"></span><h2>系统状态<a class="headerlink" href="#setting-status(系统状态)" title="Permalink to this headline">¶</a></h2>
+<p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id3">
+<h3>系统运行状态<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/系统运行状态.png"><img alt="alternate text" class="align-center" src="_images/系统运行状态.png" style="width: 263.0px; height: 285.0px;" /></a>
+<ul class="simple">
+<li>CPU</li>
+<li>MEM</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>网络状态<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>网络状态</li>
+</ul>
+<a class="reference internal image-reference" href="_images/网络状态.png"><img alt="alternate text" class="align-center" src="_images/网络状态.png" style="width: 504.0px; height: 665.0px;" /></a>
+<ul class="simple">
+<li>编辑带宽</li>
+</ul>
+<a class="reference internal image-reference" href="_images/编辑带宽.png"><img alt="alternate text" class="align-center" src="_images/编辑带宽.png" style="width: 505.0px; height: 591.0px;" /></a>
+</div>
+</div>
+<div class="section" id="setting-home(应用程序)">
+<span id="id5"></span><h2>应用程序<a class="headerlink" href="#setting-home(应用程序)" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/应用程序.png"><img alt="alternate text" class="align-center" src="_images/应用程序.png" style="width: 1263.0px; height: 1377.0px;" /></a>
+<p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id6">
+<h3>导航栏<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/导航栏.png"><img alt="alternate text" class="align-center" src="_images/导航栏.png" style="width: 1263.0px; height: 108.0px;" /></a>
+<ul class="simple">
+<li>系统类型</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>系统<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/系统.png"><img alt="alternate text" class="align-center" src="_images/系统.png" style="width: 1172.0px; height: 285.0px;" /></a>
+<ul class="simple">
+<li>系统类型</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>网络<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/网络.png"><img alt="alternate text" class="align-center" src="_images/网络.png" style="width: 1172.0px; height: 537.0px;" /></a>
+<ul class="simple">
+<li>网络类型</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>防火墙<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/防火墙.png"><img alt="alternate text" class="align-center" src="_images/防火墙.png" style="width: 1172.0px; height: 177.0px;" /></a>
+<ul class="simple">
+<li>防火墙类型</li>
+</ul>
+</div>
+</div>
+<div class="section" id="telnet">
+<h2>Telnet 服务<a class="headerlink" href="#telnet" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Telnet-服务基础设置.png"><img alt="alternate text" class="align-center" src="_images/Telnet-服务基础设置.png" style="width: 449.0px; height: 189.0px;" /></a>
+<span class="target" id="setting-telnetd(Telnet 服务)"></span><p>启用后即可进行远程控制</p>
+<div class="section" id="id10">
+<h3>启用<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>启用</li>
+</ul>
+<p>点击状态即可启用</p>
+</div>
+<div class="section" id="id11">
+<h3>端口<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>端口</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>固件升级<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/固件升级.png"><img alt="alternate text" class="align-center" src="_images/固件升级.png" style="width: 789.0px; height: 411.0px;" /></a>
+<span class="target" id="setting-firmware(固件升级)"></span><p>支持恢复出厂设置 和 升级固件,按照需要,进入子页面进行设置,需要刷机,请直接上传固件.</p>
+<div class="section" id="id13">
+<h3>恢复出厂设置<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/恢复出厂设置.png"><img alt="alternate text" class="align-center" src="_images/恢复出厂设置.png" style="width: 746.0px; height: 411.0px;" /></a>
+<p>可以选择你所需要的文件进行保存,恢复出厂设置后,该文件将保持原样.</p>
+</div>
+<div class="section" id="id14">
+<h3>升级固件<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/固件可用-是否刷机.png"><img alt="alternate text" class="align-center" src="_images/固件可用-是否刷机.png" style="width: 746.0px; height: 537.0px;" /></a>
+<p>可以选择你所需要的文件进行保存,刷机后,该文件将保持原样.</p>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>消息<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/消息.png"><img alt="alternate text" class="align-center" src="_images/消息.png" style="width: 746.0px; height: 529.0px;" /></a>
+<span class="target" id="setting-notice(消息)"></span><p>从消息中获取系统操作时间点，点击处理可跳转到此消息对应的页面上</p>
+<div class="section" id="id16">
+<h3>消息<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>消息</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h3>电子邮件设置<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/电子邮件设置.png"><img alt="alternate text" class="align-center" src="_images/电子邮件设置.png" style="width: 584.0px; height: 1204.0px;" /></a>
+<p>请开通SMTP后，再设置电子邮箱</p>
+</div>
+<div class="section" id="id18">
+<h3>抄送<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/抄送.png"><img alt="alternate text" class="align-center" src="_images/抄送.png" style="width: 868.0px; height: 263.0px;" /></a>
+<p>抄送和密抄</p>
+</div>
+<div class="section" id="id19">
+<h3>电子邮件测试<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/电子邮件测试.png"><img alt="alternate text" class="align-center" src="_images/电子邮件测试.png" style="width: 880.0px; height: 400.0px;" /></a>
+<p>将发送一个测试邮件到你指定的邮箱</p>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>磁盘管理<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/磁盘管理.png"><img alt="alternate text" class="align-center" src="_images/磁盘管理.png" style="width: 758.0px; height: 290.0px;" /></a>
+<span class="target" id="setting-disk(磁盘管理)"></span><p>点击生效和应用后可挂载外用U盘</p>
+<div class="section" id="id21">
+<h3>磁盘管理<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>磁盘管理</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>系统信息<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3>系统信息<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/系统信息.png"><img alt="alternate text" class="align-center" src="_images/系统信息.png" style="width: 471.0px; height: 1335.0px;" /></a>
+<span class="target" id="setting-sysinfo(系统信息)"></span><p>更改主机名点击应用重启后生效</p>
+</div>
+<div class="section" id="id24">
+<h3>时间设置<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/时间设置.png"><img alt="alternate text" class="align-center" src="_images/时间设置.png" style="width: 993.0px; height: 599.0px;" /></a>
+<span class="target" id="setting-sysinfo(时间设置)"></span><p>更改时间设置点击应用重启后生效</p>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>系统用户<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h3>系统用户<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>系统用户</li>
+</ul>
+<span class="target" id="setting-sysusers(系统用户)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<a class="reference internal image-reference" href="_images/系统用户.png"><img alt="alternate text" class="align-center" src="_images/系统用户.png" style="width: 303.0px; height: 267.0px;" /></a>
+</div>
+<div class="section" id="id27">
+<h3>编辑用户<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>编辑用户</li>
+</ul>
+<a class="reference internal image-reference" href="_images/编辑用户.png"><img alt="alternate text" class="align-center" src="_images/编辑用户.png" style="width: 620.0px; height: 755.0px;" /></a>
+</div>
+<div class="section" id="id28">
+<h3>编辑用户组<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>编辑用户组</li>
+</ul>
+<a class="reference internal image-reference" href="_images/编辑用户组.png"><img alt="alternate text" class="align-center" src="_images/编辑用户组.png" style="width: 623.0px; height: 342.0px;" /></a>
+</div>
+<div class="section" id="id29">
+<h3>管理用户<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>管理用户</li>
+</ul>
+<a class="reference internal image-reference" href="_images/管理用户.png"><img alt="alternate text" class="align-center" src="_images/管理用户.png" style="width: 958.0px; height: 511.0px;" /></a>
+</div>
+<div class="section" id="id30">
+<h3>管理用户组<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>管理用户组</li>
+</ul>
+<a class="reference internal image-reference" href="_images/管理用户组.png"><img alt="alternate text" class="align-center" src="_images/管理用户组.png" style="width: 783.0px; height: 642.0px;" /></a>
+</div>
+<div class="section" id="id31">
+<h3>添加用户<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>添加用户</li>
+</ul>
+<a class="reference internal image-reference" href="_images/添加用户.png"><img alt="alternate text" class="align-center" src="_images/添加用户.png" style="width: 625.0px; height: 763.0px;" /></a>
+</div>
+<div class="section" id="id32">
+<h3>添加用户组<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>添加用户组</li>
+</ul>
+<a class="reference internal image-reference" href="_images/添加用户组.png"><img alt="alternate text" class="align-center" src="_images/添加用户组.png" style="width: 620.0px; height: 340.0px;" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="网络.html" class="btn btn-neutral float-right" title="网络类应用" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gettingstarted.html" class="btn btn-neutral" title="从这里开始" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 涡轮派科技.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

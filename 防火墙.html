@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>防火墙类应用 &mdash; ShellGui 手册 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="网络类应用" href="网络.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ShellGui 手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">从这里开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="系统.html">系统类应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="网络.html">网络类应用</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">防火墙类应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">防火墙附加</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#syn-flood">SYN flood 保护</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wan">Wan 基础设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geoip">GEOIP数据库</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">局域网上网记录</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">总览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">浏览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">上网记录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">搜索记录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-qos-shellgui(QOS流控)">QOS流控</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">QOS流控</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-quotas(流量配额)">流量配额</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">查看</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-restriction(访问限制)">访问限制</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">设置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ShellGui 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>防火墙类应用</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/防火墙.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>防火墙类应用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>防火墙附加<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon7.png"><img alt="alternate text" class="align-center" src="_images/icon7.png" style="width: 124.0px; height: 115.0px;" /></a>
+<span class="target" id="setting-firewall-extra(防火墙附加)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="syn-flood">
+<h3>SYN flood 保护<a class="headerlink" href="#syn-flood" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/syn.png"><img alt="alternate text" class="align-center" src="_images/syn.png" style="width: 711.0px; height: 56.0px;" /></a>
+</div>
+<div class="section" id="wan">
+<h3>Wan 基础设置<a class="headerlink" href="#wan" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/wan.png"><img alt="alternate text" class="align-center" src="_images/wan.png" style="width: 816.0px; height: 646.0px;" /></a>
+</div>
+<div class="section" id="geoip">
+<h3>GEOIP数据库<a class="headerlink" href="#geoip" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/geoip.png"><img alt="alternate text" class="align-center" src="_images/geoip.png" style="width: 983.0px; height: 386.0px;" /></a>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>局域网上网记录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="setting-lan-net-record(局域网上网记录)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id4">
+<h3>总览<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/summary.png"><img alt="alternate text" class="align-center" src="_images/summary.png" style="width: 974.0px; height: 123.0px;" /></a>
+</div>
+<div class="section" id="id5">
+<h3>设置<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/switch.png"><img alt="alternate text" class="align-center" src="_images/switch.png" style="width: 959.0px; height: 59.0px;" /></a>
+</div>
+<div class="section" id="id6">
+<h3>浏览<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/pageinto.png"><img alt="alternate text" class="align-center" src="_images/pageinto.png" style="width: 951.0px; height: 70.0px;" /></a>
+</div>
+<div class="section" id="id7">
+<h3>上网记录<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/record.png"><img alt="alternate text" class="align-center" src="_images/record.png" style="width: 1165.0px; height: 543.0px;" /></a>
+</div>
+<div class="section" id="id8">
+<h3>搜索记录<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/keyword.png"><img alt="alternate text" class="align-center" src="_images/keyword.png" style="width: 1157.0px; height: 137.0px;" /></a>
+</div>
+</div>
+<div class="section" id="setting-qos-shellgui(QOS流控)">
+<span id="qos"></span><h2>QOS流控<a class="headerlink" href="#setting-qos-shellgui(QOS流控)" title="Permalink to this headline">¶</a></h2>
+<p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id9">
+<h3>QOS流控<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>QOS流控</li>
+</ul>
+<a class="reference internal image-reference" href="_images/QOS流控.png"><img alt="alternate text" class="align-center" src="_images/QOS流控.png" style="width: 953.0px; height: 655.0px;" /></a>
+</div>
+</div>
+<div class="section" id="setting-quotas(流量配额)">
+<span id="id10"></span><h2>流量配额<a class="headerlink" href="#setting-quotas(流量配额)" title="Permalink to this headline">¶</a></h2>
+<p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id11">
+<h3>设置<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/配额表.png"><img alt="alternate text" class="align-center" src="_images/配额表.png" style="width: 975.0px; height: 133.0px;" /></a>
+<p>当前配额 显示的是当前已经设置的流量限制的规则列表</p>
+<p>要添加新的规则，可以单击 添加规则 按钮，并填写表单：</p>
+<a class="reference internal image-reference" href="_images/配额表单.png"><img alt="alternate text" class="align-center" src="_images/配额表单.png" style="width: 590.0px; height: 566.0px;" /></a>
+<ul class="simple">
+<li>设置应用范围</li>
+</ul>
+<p>应用到 字段用于设置配额规则的应用范围，有四个选项，分别是：</p>
+<p>应用到整个网络</p>
+<p>应用到独立主机（要配置当前已连接的主机，可以到 连接主机 应用页面查看主机地址）</p>
+<p>应用到所有没有明确配额的独立主机（配额规则的流量限制针对这些主机中每一个主机的流量生效）</p>
+<p>应用到所有没有明确配额的主机（合并）（配额规则的流量限制针对这些主机的流量总额生效）</p>
+<ul class="simple">
+<li>设置配额</li>
+</ul>
+<p>最大上传，最大下载和最大总量三个字段用于设置各流向的最大流量</p>
+<p>要使规则生效，这三个字段必须至少设置一个</p>
+<p>输入限制额数字，并选择合适的单位即可</p>
+<ul class="simple">
+<li>配额复位</li>
+</ul>
+<p>配额复位和复位时间用于设置配额重置的频率和时间。</p>
+<p>配额复位的频率可选择每小时、每天、每周或每月</p>
+<p>其中每周和每月选项下还可以选择周几或每月几号进行流量重置</p>
+<ul class="simple">
+<li>生效时段</li>
+</ul>
+<p>配额生效 字段可以用来设置配额生效的时段</p>
+<p>除了总是生效外，还可以显式设置生效时间或禁用时间</p>
+<p>这个字段的两个隐藏字段提供了灵活的设置格式</p>
+<p>例如，要想将规则设置为每天的6:00-18:00生效可以这样设置</p>
+<a class="reference internal image-reference" href="_images/配额生效everyday.png"><img alt="alternate text" class="align-center" src="_images/配额生效everyday.png" style="width: 473.0px; height: 124.0px;" /></a>
+<p>要将规则设置为每周一到周五全天生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/配额生效days.png"><img alt="alternate text" class="align-center" src="_images/配额生效days.png" style="width: 480.0px; height: 93.0px;" /></a>
+<p>要将规则设置为每周-至周天的6:00-18:00生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/配额生效dayshours.png"><img alt="alternate text" class="align-center" src="_images/配额生效dayshours.png" style="width: 477.0px; height: 167.0px;" /></a>
+<p>要将规则设置为除了每周五18:00-周天22:00外每天都生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/配额生效notweekly.png"><img alt="alternate text" class="align-center" src="_images/配额生效notweekly.png" style="width: 474.0px; height: 125.0px;" /></a>
+<ul class="simple">
+<li>超额配置</li>
+</ul>
+<p>最后一个字段用于设置应用规则的主机使用的流量超出限制额度情况下的机制</p>
+<p>除了可以简单的设置为关闭所有网路外，还可以设置网速限制，这主要通过整体速度限制，或者QOS流控归类限制来实现。</p>
+<p>注意，当QOS流控规则未开启的时候，只有整体网速限制才会生效。当开启了QOS流控，可以通过选择生效模式来控制。</p>
+<a class="reference internal image-reference" href="_images/超额生效模式.png"><img alt="alternate text" class="align-center" src="_images/超额生效模式.png" style="width: 556.0px; height: 165.0px;" /></a>
+<p>全部设置完成后，点击 添加 按钮即可将新建的规则添加到列表，例如这里设置了一个针对主机192.168.1.192的规则，这条规则将总的流量限制为2TByte，每周一重置，并且只在每周一到周五生效，超额之后上传和下载速度都设置为30Kb/s</p>
+<a class="reference internal image-reference" href="_images/设置范例.png"><img alt="alternate text" class="align-center" src="_images/设置范例.png" style="width: 591.0px; height: 846.0px;" /></a>
+<p>注意！添加完成后该规则并未当即生效，而是被暂存到了规则列表：</p>
+<a class="reference internal image-reference" href="_images/范例列表.png"><img alt="alternate text" class="align-center" src="_images/范例列表.png" style="width: 971.0px; height: 195.0px;" /></a>
+<p>此时还可以通过点击列表中的编辑按钮对规则进行编辑，或点击移除按钮，移除规则。
+勾选启用复选框可以设置为启用。</p>
+<p>最后点击页面级的应用按钮，待页面请求成功并刷新后，这条规则才真正启用了。</p>
+</div>
+<div class="section" id="id12">
+<h3>查看<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>流量配额使用情况表 可以查看当前所有规则下流量的使用情况。</p>
+<p>这里我们只指定了一条针对192.168.1.192主机的规则</p>
+<p>可以通过设置主机显示规则显示IP地址或主机名</p>
+<p>通过设置使用情况显示格式，可以查看当前流量使用的百分比，当前已用流量和总的设定流量等。</p>
+<a class="reference internal image-reference" href="_images/使用情况表.png"><img alt="alternate text" class="align-center" src="_images/使用情况表.png" style="width: 969.0px; height: 171.0px;" /></a>
+</div>
+</div>
+<div class="section" id="setting-restriction(访问限制)">
+<span id="id13"></span><h2>访问限制<a class="headerlink" href="#setting-restriction(访问限制)" title="Permalink to this headline">¶</a></h2>
+<p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id14">
+<h3>设置<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>访问限制分为两个部分，一部分用于设置黑名单，一部分用于设置白名单。</p>
+<p>设置方法基本一致，但是应用效果是不同的。</p>
+<ul class="simple">
+<li>访问限制设置</li>
+</ul>
+<a class="reference internal image-reference" href="_images/限制规则列表.png"><img alt="alternate text" class="align-center" src="_images/限制规则列表.png" style="width: 1157.0px; height: 189.0px;" /></a>
+<p>点击 添加新规则 按钮并完成以下表单即可设置新的限制规则</p>
+<a class="reference internal image-reference" href="_images/规则表单.png"><img alt="alternate text" class="align-center" src="_images/规则表单.png" style="width: 589.0px; height: 330.0px;" /></a>
+<p>规则应用到 字段用于设置规则应用范围，可以选择以下三种模式：</p>
+<p>所有主机</p>
+<p>仅主机列表中的主机</p>
+<p>除了主机列表之外的所有主机</p>
+<p>除第一项外，都会有一个表单控件显示用于添加主机列表。</p>
+<a class="reference internal image-reference" href="_images/主机列表.png"><img alt="alternate text" class="align-center" src="_images/主机列表.png" style="width: 492.0px; height: 159.0px;" /></a>
+<p>计划表 字段用于设置规则生效的时间段。</p>
+<p>除了使用默认的每天全天生效之外，这里也提供了灵活的设置方法：</p>
+<p>例如，要设置为每天6:00-18:00生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/生效时间everyday.png"><img alt="alternate text" class="align-center" src="_images/生效时间everyday.png" style="width: 489.0px; height: 124.0px;" /></a>
+<p>要设置为每周一到周五全天生效，可这样设置</p>
+<a class="reference internal image-reference" href="_images/生效时间allday.png"><img alt="alternate text" class="align-center" src="_images/生效时间allday.png" style="width: 491.0px; height: 84.0px;" /></a>
+<p>要设置为每周一到周五的6:00-18:00生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/生效时间dayshours.png"><img alt="alternate text" class="align-center" src="_images/生效时间dayshours.png" style="width: 495.0px; height: 174.0px;" /></a>
+<p>要设置为每周一6:00到周五18:00生效，可以这样设置</p>
+<a class="reference internal image-reference" href="_images/生效时间weekly.png"><img alt="alternate text" class="align-center" src="_images/生效时间weekly.png" style="width: 535.0px; height: 130.0px;" /></a>
+<p>被限制资源 字段用于设置被限制的资源，可以使用默认的全部网络资源，或者设置定制型的资源类型</p>
+<a class="reference internal image-reference" href="_images/资源限制.png"><img alt="alternate text" class="align-center" src="_images/资源限制.png" style="width: 503.0px; height: 330.0px;" /></a>
+<p>基本上每种资源类型都提供了三种限制模式：全部限制，特定限制和例外情况。
+按需填写完后点击 保存 按钮即可将规则暂存到规则列表。</p>
+<p>例如，我们这里指定一条针对所有主机的规则，这条规则在每天的9:00-21:00生效，生效期间所有主机都不能访问 <a class="reference external" href="http://www.example.com">http://www.example.com</a> 这个地址，我们将这条规则的描述（标题）定为&#8217;no example.com while work&#8217;</p>
+<a class="reference internal image-reference" href="_images/限制范例.png"><img alt="alternate text" class="align-center" src="_images/限制范例.png" style="width: 588.0px; height: 854.0px;" /></a>
+<p>暂存在列表中的规则还可以进行编辑、移除或者设置应用到服务器之后是否启用</p>
+<a class="reference internal image-reference" href="_images/范例列表1.png"><img alt="alternate text" class="align-center" src="_images/范例列表1.png" style="width: 971.0px; height: 184.0px;" /></a>
+<p>最后点击页面级的应用按钮，待页面刷新后规则就被应用了。</p>
+<ul class="simple">
+<li>白名单设置</li>
+</ul>
+<a class="reference internal image-reference" href="_images/例外列表.png"><img alt="alternate text" class="align-center" src="_images/例外列表.png" style="width: 1159.0px; height: 185.0px;" /></a>
+<p>点击 添加新规则 按钮并完成以下表单即可设置新的例外规则</p>
+<a class="reference internal image-reference" href="_images/例外表单.png"><img alt="alternate text" class="align-center" src="_images/例外表单.png" style="width: 593.0px; height: 328.0px;" /></a>
+<p>白名单规则表单的填写与黑名单规则基本一致，只是应用范围是作为新建规则的例外存在的，这实际上与设置黑名单时将应用范围设置为&#8217;除了主机列表之外的所有主机&#8217; 效果是一样的。
+用户需按实际需要进行设置。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="网络.html" class="btn btn-neutral" title="网络类应用" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 涡轮派科技.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

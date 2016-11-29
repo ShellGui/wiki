@@ -1,0 +1,12 @@
+******************
+系统类应用
+******************
+
+.. include:: ./app-status.txt
+.. include:: ./app-home.txt
+.. include:: ./app-telnetd.txt
+.. include:: ./app-firmware.txt
+.. include:: ./app-notice.txt
+.. include:: ./app-disk.txt
+.. include:: ./app-sysinfo.txt
+.. include:: ./app-sysusers.txt

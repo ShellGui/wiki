@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>网络类应用 &mdash; ShellGui 手册 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
+        <link rel="next" title="防火墙类应用" href="防火墙.html"/>
+        <link rel="prev" title="系统类应用" href="系统.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ShellGui 手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">从这里开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="系统.html">系统类应用</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">网络类应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">无线设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#g">2.4G网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5G网络</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">上网设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pppoe">pppoe 上网</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dhcp">dhcp 上网</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">静态地址 上网</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">高级功能</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">局域网设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ip">局域网IP设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">DHCP设置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">高级设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upnp">UPnP协议</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dhcpip">DHCP的静态IP分配</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">动态域名解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">端口转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmz">DMZ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">连接限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">网络诊断</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">网络诊断</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">局域网唤醒</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">局域网唤醒</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">连接主机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">刷新时间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">当前DHCP租约</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">已连接的无线主机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">主机活动连接数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usb">手机USB共享上网</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">手机USB共享上网</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">带宽使用图</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id24">带宽曲线图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">带宽数据表</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vlan">交换机VLan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">交换机VLan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">网速测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">网速测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adbyby">安全版Adbyby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dns-cdn">DNS CDN 加速</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id29">开启DNS CDN 加速</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">设置DNS CDN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id31">带宽分布图</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id32">饼状图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">数据表</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">负载均衡</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id35">负载均衡</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">连接列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shadowsocks">Shadowsocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id37">Shadowsocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#openvpn">OpenVPN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id38">OpenVPN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ping">Ping守护</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Ping守护</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#shadowvpn">ShadowVPN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id40">ShadowVPN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="防火墙.html">防火墙类应用</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ShellGui 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>网络类应用</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/网络.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>网络类应用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>无线设置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Wi-Fi设置.png"><img alt="alternate text" class="align-center" src="_images/Wi-Fi设置.png" style="width: 962.0px; height: 684.0px;" /></a>
+<span class="target" id="setting-wifi(无线设置)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="g">
+<h3>2.4G网络<a class="headerlink" href="#g" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>SSID 密码</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>5G网络<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>SSID 密码</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>上网设置<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/上网设置.png"><img alt="alternate text" class="align-center" src="_images/上网设置.png" style="width: 415.0px; height: 848.0px;" /></a>
+<span class="target" id="setting-wan(上网设置)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<p><strong>The incompatibilities are not dramatic.</strong> The biggest change is that
+all decoding functions now require and extra parameter. Most programs
+can be modified to work with 2.0 by adding a <tt class="docutils literal"><span class="pre">0</span></tt> as the second
+parameter to all calls of <tt class="xref c c-func docutils literal"><span class="pre">json_loads()</span></tt>, <tt class="xref c c-func docutils literal"><span class="pre">json_loadf()</span></tt>
+and <tt class="xref c c-func docutils literal"><span class="pre">json_load_file()</span></tt>.</p>
+<div class="section" id="pppoe">
+<h3>pppoe 上网<a class="headerlink" href="#pppoe" title="Permalink to this headline">¶</a></h3>
+<p>Shellgui 2.0 is backwards incompatible with the Shellgui 1.x releases.
+It is ABI incompatible, i.e. all programs dynamically linking to the
+Shellgui library need to be recompiled. It&#8217;s also API incompatible,
+i.e. the source code of programs using Shellgui 1.x may need
+modifications to make them compile against Shellgui 2.0.</p>
+<p>All the 2.x releases are guaranteed to be backwards compatible for
+both ABI and API, so no recompilation or source changes are needed
+when upgrading from 2.x to 2.y.</p>
+</div>
+<div class="section" id="dhcp">
+<h3>dhcp 上网<a class="headerlink" href="#dhcp" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><strong>Decoding flags</strong></dt>
+<dd>For future needs, a <tt class="docutils literal"><span class="pre">flags</span></tt> parameter was added as the second
+parameter to all decoding functions, i.e. <tt class="xref c c-func docutils literal"><span class="pre">json_loads()</span></tt>,
+<tt class="xref c c-func docutils literal"><span class="pre">json_loadf()</span></tt> and <tt class="xref c c-func docutils literal"><span class="pre">json_load_file()</span></tt>. All calls to
+these functions need to be changed by adding a <tt class="docutils literal"><span class="pre">0</span></tt> as the second</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h3>静态地址 上网<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>argument. For example:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cm">/* old code */</span>
+<span class="n">json_loads</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
+
+<span class="cm">/* new code */</span>
+<span class="n">json_loads</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h3>高级功能<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>克隆网卡</dt>
+<dd><p class="first last">克隆一个虚拟的 wan</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>同步ppp拨号</dt>
+<dd><p class="first last">全局开启同步ppp拨号</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MAC地址</dt>
+<dd><p class="first last">使用特点MAC地址</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt><strong>Underlying type of JSON integers</strong></dt>
+<dd><p class="first">The underlying C type of JSON integers has been changed from
+<tt class="xref c c-type docutils literal"><span class="pre">int</span></tt> to the widest available signed integer type, i.e.
+<tt class="xref c c-type docutils literal"><span class="pre">long</span> <span class="pre">long</span></tt> or <tt class="xref c c-type docutils literal"><span class="pre">long</span></tt>, depending on whether
+<tt class="xref c c-type docutils literal"><span class="pre">long</span> <span class="pre">long</span></tt> is supported on your system or not. This makes
+the whole 64-bit integer range available on most modern systems.</p>
+<p class="last"><tt class="docutils literal"><span class="pre">jansson.h</span></tt> has a typedef <tt class="xref c c-type docutils literal"><span class="pre">json_int_t</span></tt> to the underlying
+integer type. <tt class="xref c c-type docutils literal"><span class="pre">int</span></tt> should still be used in most cases when
+dealing with smallish JSON integers, as the compiler handles
+implicit type coercion. Only when the full 64-bit range is needed,
+<tt class="xref c c-type docutils literal"><span class="pre">json_int_t</span></tt> should be explicitly used.</p>
+</dd>
+<dt><strong>Maximum encoder indentation depth</strong></dt>
+<dd>The maximum argument of the <tt class="docutils literal"><span class="pre">JSON_INDENT()</span></tt> macro has been
+changed from 255 to 31, to free up bits from the <tt class="docutils literal"><span class="pre">flags</span></tt>
+parameter of <tt class="xref c c-func docutils literal"><span class="pre">json_dumps()</span></tt>, <tt class="xref c c-func docutils literal"><span class="pre">json_dumpf()</span></tt> and
+<tt class="xref c c-func docutils literal"><span class="pre">json_dump_file()</span></tt>. If your code uses a bigger indentation
+than 31, it needs to be changed.</dd>
+<dt><strong>Unsigned integers in API functions</strong></dt>
+<dd>Version 2.0 unifies unsigned integer usage in the API. All uses of
+<tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">int</span></tt> and <tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">long</span></tt> have been replaced
+with <tt class="xref c c-type docutils literal"><span class="pre">size_t</span></tt>. This includes flags, container sizes, etc.
+This should not require source code changes, as both
+<tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">int</span></tt> and <tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">long</span></tt> are usually
+compatible with <tt class="xref c c-type docutils literal"><span class="pre">size_t</span></tt>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>局域网设置<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/局域网设置.png"><img alt="alternate text" class="align-center" src="_images/局域网设置.png" style="width: 492.0px; height: 1166.0px;" /></a>
+<span class="target" id="setting-lan(局域网设置)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="ip">
+<h3>局域网IP设置<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>设置局域网IP和掩码</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>DHCP设置<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>设置DHCP服务器信息</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>高级设置<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/高级设置.png"><img alt="alternate text" class="align-center" src="_images/高级设置.png" style="width: 954.0px; height: 1370.0px;" /></a>
+<span class="target" id="setting-adv(高级设置)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="upnp">
+<h3>UPnP协议<a class="headerlink" href="#upnp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>UPnP协议开关</li>
+<li>UPnP协议状态列表</li>
+</ul>
+</div>
+<div class="section" id="dhcpip">
+<h3>DHCP的静态IP分配<a class="headerlink" href="#dhcpip" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>DHCP的静态IP绑定分配</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>动态域名解析<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>动态域名解析</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>端口转发<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>端口转发</li>
+</ul>
+</div>
+<div class="section" id="dmz">
+<h3>DMZ<a class="headerlink" href="#dmz" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>DMZ</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>连接限制<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon.png"><img alt="alternate text" class="align-center" src="_images/icon.png" style="width: 108.0px; height: 103.0px;" /></a>
+<span class="target" id="setting-connlimits(连接限制)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<a class="reference internal image-reference" href="_images/连接限制.png"><img alt="alternate text" class="align-center" src="_images/连接限制.png" style="width: 471.0px; height: 546.0px;" /></a>
+<span class="target" id="setting-connlimits(连接限制)"></span></div>
+<div class="section" id="id13">
+<h2>网络诊断<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/网络诊断.png"><img alt="alternate text" class="align-center" src="_images/网络诊断.png" style="width: 510.0px; height: 248.0px;" /></a>
+<span class="target" id="setting-net-diagnostics(网络诊断)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id14">
+<h3>网络诊断<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>网络诊断</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>局域网唤醒<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/局域网唤醒.png"><img alt="alternate text" class="align-center" src="_images/局域网唤醒.png" style="width: 924.0px; height: 206.0px;" /></a>
+<span class="target" id="setting-wol(局域网唤醒)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id16">
+<h3>局域网唤醒<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>局域网唤醒</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>连接主机<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon1.png"><img alt="alternate text" class="align-center" src="_images/icon1.png" style="width: 115.0px; height: 111.0px;" /></a>
+<span class="target" id="setting-hosts(连接主机)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id18">
+<h3>刷新时间<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/time.png"><img alt="alternate text" class="align-center" src="_images/time.png" style="width: 1063.0px; height: 64.0px;" /></a>
+<p>设置数据刷新频率，默认10秒刷新一次。</p>
+</div>
+<div class="section" id="id19">
+<h3>当前DHCP租约<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/dhcp.png"><img alt="alternate text" class="align-center" src="_images/dhcp.png" style="width: 1074.0px; height: 401.0px;" /></a>
+</div>
+<div class="section" id="id20">
+<h3>已连接的无线主机<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/linked.png"><img alt="alternate text" class="align-center" src="_images/linked.png" style="width: 1064.0px; height: 130.0px;" /></a>
+</div>
+<div class="section" id="id21">
+<h3>主机活动连接数<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/active.png"><img alt="alternate text" class="align-center" src="_images/active.png" style="width: 1063.0px; height: 274.0px;" /></a>
+</div>
+</div>
+<div class="section" id="usb">
+<h2>手机USB共享上网<a class="headerlink" href="#usb" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/手机USB共享上网.png"><img alt="alternate text" class="align-center" src="_images/手机USB共享上网.png" style="width: 399.0px; height: 427.0px;" /></a>
+<span class="target" id="setting-usb-tethering-modem(手机USB共享上网)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id22">
+<h3>手机USB共享上网<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>手机USB共享上网</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>带宽使用图<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon2.png"><img alt="alternate text" class="align-center" src="_images/icon2.png" style="width: 135.0px; height: 109.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span><p>带宽使用图用于展示一定时间频段内带宽的使用情况。本应用分为两部分：</p>
+<div class="section" id="id24">
+<h3>带宽曲线图<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/linecontrol.png"><img alt="alternate text" class="align-center" src="_images/linecontrol.png" style="width: 1079.0px; height: 186.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span><a class="reference internal image-reference" href="_images/line.png"><img alt="alternate text" class="align-center" src="_images/line.png" style="width: 1162.0px; height: 919.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span><p>曲线图分为全部带宽、上传、下载三个部分，用于标识不同的数据流向。</p>
+<p>控件1用来设置曲线图的时间频段：</p>
+<a class="reference internal image-reference" href="_images/control1.png"><img alt="alternate text" class="align-center" src="_images/control1.png" style="width: 928.0px; height: 47.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span><p>控件2用于设置三条曲线显示与否，如果显示，显示那种类型的数据：</p>
+<a class="reference internal image-reference" href="_images/control2.png"><img alt="alternate text" class="align-center" src="_images/control2.png" style="width: 1038.0px; height: 104.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span></div>
+<div class="section" id="id25">
+<h3>带宽数据表<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/table.png"><img alt="alternate text" class="align-center" src="_images/table.png" style="width: 1211.0px; height: 903.0px;" /></a>
+<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span></div>
+</div>
+<div class="section" id="vlan">
+<h2>交换机VLan<a class="headerlink" href="#vlan" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/交换机VLan.png"><img alt="alternate text" class="align-center" src="_images/交换机VLan.png" style="width: 971.0px; height: 368.0px;" /></a>
+<span class="target" id="setting-vlan(交换机VLan)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id26">
+<h3>交换机VLan<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>交换机VLan</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>网速测试<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/网速测试.png"><img alt="alternate text" class="align-center" src="_images/网速测试.png" style="width: 880.0px; height: 888.0px;" /></a>
+<span class="target" id="setting-speed-test(网速测试)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id28">
+<h3>网速测试<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>网速测试</li>
+</ul>
+</div>
+</div>
+<div class="section" id="adbyby">
+<h2>安全版Adbyby<a class="headerlink" href="#adbyby" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon3.png"><img alt="alternate text" class="align-center" src="_images/icon3.png" style="width: 142.0px; height: 103.0px;" /></a>
+<span class="target" id="setting-adbyby-save(安全版Adbyby)"></span><p>Adbyby广告屏蔽大师可以全面过滤各种横幅、弹窗、视频广告，同时阻止跟踪、隐私窃取及各种恶意网站。</p>
+<a class="reference internal image-reference" href="_images/安全版Adbyby.png"><img alt="alternate text" class="align-center" src="_images/安全版Adbyby.png" style="width: 256.0px; height: 104.0px;" /></a>
+<span class="target" id="setting-adbyby-save(安全版Adbyby)"></span><p>通过点击 状态 标签后的开关按钮就可开启Adbyby。</p>
+</div>
+<div class="section" id="dns-cdn">
+<h2>DNS CDN 加速<a class="headerlink" href="#dns-cdn" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon4.png"><img alt="alternate text" class="align-center" src="_images/icon4.png" style="width: 160.0px; height: 112.0px;" /></a>
+<span class="target" id="setting-dns-cdn(DNS CDN 加速)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id29">
+<h3>开启DNS CDN 加速<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/开启.png"><img alt="alternate text" class="align-center" src="_images/开启.png" style="width: 587.0px; height: 61.0px;" /></a>
+<span class="target" id="setting-dns-cdn(DNS CDN 加速)"></span></div>
+<div class="section" id="id30">
+<h3>设置DNS CDN<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/设置.png"><img alt="alternate text" class="align-center" src="_images/设置.png" style="width: 664.0px; height: 302.0px;" /></a>
+<span class="target" id="setting-dns-cdn(DNS CDN 加速)"></span></div>
+</div>
+<div class="section" id="id31">
+<h2>带宽分布图<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon5.png"><img alt="alternate text" class="align-center" src="_images/icon5.png" style="width: 127.0px; height: 119.0px;" /></a>
+<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span><p>宽带分布图 应用，用于显示一定时间段内宽带数据的流向分布。
+本应用分为两部分：</p>
+<div class="section" id="id32">
+<h3>饼状图<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/pie.png"><img alt="alternate text" class="align-center" src="_images/pie.png" style="width: 1106.0px; height: 908.0px;" /></a>
+<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span><p>饼状图图例上方的控件可用于调整显示时间频段、时间段以及显示方式。
+例如要查看11月11日整天的数据流量分布，可以这样设置控件：</p>
+<a class="reference internal image-reference" href="_images/11-11.png"><img alt="alternate text" class="align-center" src="_images/11-11.png" style="width: 448.0px; height: 52.0px;" /></a>
+<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span><p>要查看今天13:15-13:30这一刻钟内的流量分布情况，可以这样设置：</p>
+<a class="reference internal image-reference" href="_images/13-15.png"><img alt="alternate text" class="align-center" src="_images/13-15.png" style="width: 414.0px; height: 48.0px;" /></a>
+<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span><p>控件设置的变化，不仅会影响到饼状图，还会同时反映到数据表的显示。</p>
+<p>点击图例中的主机列表可以对主机信息是否显示进行切换。</p>
+</div>
+<div class="section" id="id33">
+<h3>数据表<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/table1.png"><img alt="alternate text" class="align-center" src="_images/table1.png" style="width: 1177.0px; height: 339.0px;" /></a>
+<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span></div>
+</div>
+<div class="section" id="id34">
+<h2>负载均衡<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/负载均衡.png"><img alt="alternate text" class="align-center" src="_images/负载均衡.png" style="width: 919.0px; height: 1657.0px;" /></a>
+<span class="target" id="setting-mwan3(负载均衡)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id35">
+<h3>负载均衡<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>负载均衡</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>连接列表<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/icon6.png"><img alt="alternate text" class="align-center" src="_images/icon6.png" style="width: 95.0px; height: 106.0px;" /></a>
+<span class="target" id="setting-conntrack(连接列表)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<a class="reference internal image-reference" href="_images/连接列表.png"><img alt="alternate text" class="align-center" src="_images/连接列表.png" style="width: 921.0px; height: 563.0px;" /></a>
+<span class="target" id="setting-conntrack(连接列表)"></span></div>
+<div class="section" id="shadowsocks">
+<h2>Shadowsocks<a class="headerlink" href="#shadowsocks" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Shadowsocks.png"><img alt="alternate text" class="align-center" src="_images/Shadowsocks.png" style="width: 977.0px; height: 1700.0px;" /></a>
+<span class="target" id="setting-shadowsocks(Shadowsocks)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id37">
+<h3>Shadowsocks<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Shadowsocks</li>
+</ul>
+</div>
+</div>
+<div class="section" id="openvpn">
+<h2>OpenVPN<a class="headerlink" href="#openvpn" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/OpenVPN.png"><img alt="alternate text" class="align-center" src="_images/OpenVPN.png" style="width: 910.0px; height: 1018.0px;" /></a>
+<span class="target" id="setting-openvpn(OpenVPN)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id38">
+<h3>OpenVPN<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>OpenVPN</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ping">
+<h2>Ping守护<a class="headerlink" href="#ping" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Ping守护.png"><img alt="alternate text" class="align-center" src="_images/Ping守护.png" style="width: 560.0px; height: 380.0px;" /></a>
+<span class="target" id="setting-ping-watchdog(Ping守护)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id39">
+<h3>Ping守护<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ping守护</li>
+</ul>
+</div>
+</div>
+<div class="section" id="shadowvpn">
+<h2>ShadowVPN<a class="headerlink" href="#shadowvpn" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ShadowVPN.png"><img alt="alternate text" class="align-center" src="_images/ShadowVPN.png" style="width: 670.0px; height: 663.0px;" /></a>
+<span class="target" id="setting-shadowvpn(ShadowVPN)"></span><p>This chapter lists the backwards incompatible changes introduced in
+Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
+<div class="section" id="id40">
+<h3>ShadowVPN<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ShadowVPN</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="防火墙.html" class="btn btn-neutral float-right" title="防火墙类应用" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="系统.html" class="btn btn-neutral" title="系统类应用" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 涡轮派科技.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
