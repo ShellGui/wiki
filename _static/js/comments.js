@@ -1,14 +1,12 @@
-var apps = {'wan':1,'wifi':2,'lan':3,'adv':4,'status':5,'home':6,'telnetd':7,
-            'firmware':8,'filebrowser':9,'notice':10,'disk':11,'sysinfo':12,'sysusers':13,
-            'jimai':14,'docker':15,'ac-set':16,'dns-cdn':17,'openvpn':18,'ping-watchdog':19,
-            'shadowvpn':20,'shadowsocks':21,'vlan':22,'adbyby-save':23,'wol':24,'bandwidth-usage':25,
-            'bandwidth-distribution':26,'usb-tethering-modem':27,'wifi-spectrum':28,
-            'wifi-client':29,'wire-ap':30,'net-diagnostics':31,'speed-test':32,'mwan3':33,
-            'hosts':34,'conntrack':35,'connlimits':36,'qos-shellgui':37,'lan-net-record':38,
-            'quotas':39,'restriction':40,'firewall-extra':41};
+var apps = {"restriction": 33,"quotas": 32,"qos-shellgui": 31,"lan-net-record": 30,"firewall-extra": 29,"ping-watchdog": 28,"openvpn": 27,"shadowsocks": 26,
+"conntrack": 25,"mwan3": 24,"bandwidth-distribution": 23,"setting-dns-cdn": 22,"adbyby-save": 21,"speed-test": 20,"vlan": 19,"bandwidth-usage": 18,
+"usb-tethering-modem": 17,"hosts": 16,"wol": 15,"net-diagnostics": 14,"wan": 13,"adv": 12,"lan": 11,"wan": 10,"wifi": 9,
+"sysusers": 8,"sysinfo": 7,"disk": 6,"notice": 5,"firmware": 4,"telnetd": 3,"home": 2,"status": 1};
+
+
 function getIssue(title){
   var issue_id = apps[title];
-  var url = 'https://api.github.com/repos/ShellGui/doc_comments/issues/' + issue_id;
+  var url = 'https://api.github.com/repos/ShellGui/wiki/issues/' + issue_id;
   $.get(url,function(data){
       makeIssue(data,title);
       getComments(data.number,title);
@@ -24,7 +22,7 @@ function makeIssue(issue,title){
   $('#' + title + '_comment_container').append(issueDom);
 }
 function getComments(id,title){
-  var url = 'https://api.github.com/repos/ShellGui/doc_comments/issues/' + id + '/comments';
+  var url = 'https://api.github.com/repos/ShellGui/wiki/issues/' + id + '/comments';
   $.ajax(url, {
     headers: {Accept: "application/vnd.github.squirrel-girl-preview.full+json"},
     dataType: "json",
