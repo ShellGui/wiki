@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -32,7 +33,17 @@
   
     <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
         <link rel="next" title="防火墙类应用" href="防火墙.html"/>
-        <link rel="prev" title="系统类应用" href="系统.html"/> 
+        <link rel="prev" title="系统类应用" href="系统.html"/>
+ 
+  <link rel="stylesheet" href="_static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_static/css/comments.css">
+  <link rel="stylesheet" href="_static/css/highlight.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'XXX account number XXX']);
+  _gaq.push(['_trackPageview']);
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -97,7 +108,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id6">高级功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">局域网设置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-lan(局域网设置)">局域网设置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ip">局域网IP设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id8">DHCP设置</a></li>
 </ul>
@@ -110,8 +121,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#dmz">DMZ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">连接限制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id13">网络诊断</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-connlimits(连接限制)">连接限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-net-diagnostics(网络诊断)">网络诊断</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id14">网络诊断</a></li>
 </ul>
 </li>
@@ -119,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id16">局域网唤醒</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id17">连接主机</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-hosts(连接主机)">连接主机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id18">刷新时间</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id19">当前DHCP租约</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id20">已连接的无线主机</a></li>
@@ -130,48 +141,48 @@
 <li class="toctree-l3"><a class="reference internal" href="#id22">手机USB共享上网</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id23">带宽使用图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-bandwidth-usage(带宽使用图)">带宽使用图</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id24">带宽曲线图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id25">带宽数据表</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#vlan">交换机VLan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-vlan(交换机VLan)">交换机VLan</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id26">交换机VLan</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id27">网速测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-speed-test(网速测试)">网速测试</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id28">网速测试</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#adbyby">安全版Adbyby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dns-cdn">DNS CDN 加速</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-dns-cdn(DNS CDN 加速)">DNS CDN 加速</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id29">开启DNS CDN 加速</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id30">设置DNS CDN</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id31">带宽分布图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-bandwidth-distribution(带宽分布图)">带宽分布图</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id32">饼状图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id33">数据表</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id34">负载均衡</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-mwan3(负载均衡)">负载均衡</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id35">负载均衡</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id36">连接列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shadowsocks">Shadowsocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-conntrack(连接列表)">连接列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-shadowsocks(Shadowsocks)">Shadowsocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id37">Shadowsocks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#openvpn">OpenVPN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-openvpn(OpenVPN)">OpenVPN</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id38">OpenVPN</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#ping">Ping守护</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-ping-watchdog(Ping守护)">Ping守护</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id39">Ping守护</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#shadowvpn">ShadowVPN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-shadowvpn(ShadowVPN)">ShadowVPN</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id40">ShadowVPN</a></li>
 </ul>
 </li>
@@ -240,7 +251,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>SSID 密码</li>
 </ul>
-</div>
+<div id="wifi_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="id4">
 <h2>上网设置<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
@@ -335,12 +346,12 @@ This should not require source code changes, as both
 <tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">int</span></tt> and <tt class="xref c c-type docutils literal"><span class="pre">unsigned</span> <span class="pre">long</span></tt> are usually
 compatible with <tt class="xref c c-type docutils literal"><span class="pre">size_t</span></tt>.</dd>
 </dl>
+<div id="wan_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id7">
-<h2>局域网设置<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-lan(局域网设置)">
+<span id="id7"></span><h2>局域网设置<a class="headerlink" href="#setting-lan(局域网设置)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/局域网设置.png"><img alt="alternate text" class="align-center" src="_images/局域网设置.png" style="width: 492.0px; height: 1166.0px;" /></a>
-<span class="target" id="setting-lan(局域网设置)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="ip">
 <h3>局域网IP设置<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h3>
@@ -353,7 +364,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>设置DHCP服务器信息</li>
 </ul>
-</div>
+<div id="lan_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="id9">
 <h2>高级设置<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
@@ -390,26 +401,26 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>DMZ</li>
 </ul>
+<div id="adv_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id12">
-<h2>连接限制<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-connlimits(连接限制)">
+<span id="id12"></span><h2>连接限制<a class="headerlink" href="#setting-connlimits(连接限制)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon.png"><img alt="alternate text" class="align-center" src="_images/icon.png" style="width: 108.0px; height: 103.0px;" /></a>
 <span class="target" id="setting-connlimits(连接限制)"></span><p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <a class="reference internal image-reference" href="_images/连接限制.png"><img alt="alternate text" class="align-center" src="_images/连接限制.png" style="width: 471.0px; height: 546.0px;" /></a>
-<span class="target" id="setting-connlimits(连接限制)"></span></div>
-<div class="section" id="id13">
-<h2>网络诊断<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div id="connlimits_comment_container" class="comment-container"></div></div>
+<div class="section" id="setting-net-diagnostics(网络诊断)">
+<span id="id13"></span><h2>网络诊断<a class="headerlink" href="#setting-net-diagnostics(网络诊断)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/网络诊断.png"><img alt="alternate text" class="align-center" src="_images/网络诊断.png" style="width: 510.0px; height: 248.0px;" /></a>
-<span class="target" id="setting-net-diagnostics(网络诊断)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id14">
 <h3>网络诊断<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>网络诊断</li>
 </ul>
-</div>
+<div id="net-diagnostics_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="id15">
 <h2>局域网唤醒<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
@@ -421,12 +432,12 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>局域网唤醒</li>
 </ul>
+<div id="wol_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id17">
-<h2>连接主机<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-hosts(连接主机)">
+<span id="id17"></span><h2>连接主机<a class="headerlink" href="#setting-hosts(连接主机)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon1.png"><img alt="alternate text" class="align-center" src="_images/icon1.png" style="width: 115.0px; height: 111.0px;" /></a>
-<span class="target" id="setting-hosts(连接主机)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id18">
 <h3>刷新时间<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
@@ -444,22 +455,22 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id21">
 <h3>主机活动连接数<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/active.png"><img alt="alternate text" class="align-center" src="_images/active.png" style="width: 1063.0px; height: 274.0px;" /></a>
-</div>
+<div id="hosts_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="usb">
 <h2>手机USB共享上网<a class="headerlink" href="#usb" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/手机USB共享上网.png"><img alt="alternate text" class="align-center" src="_images/手机USB共享上网.png" style="width: 399.0px; height: 427.0px;" /></a>
-<span class="target" id="setting-usb-tethering-modem(手机USB共享上网)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<span class="target" id="setting-usb-tethering-modem(手机USB共享上网)"></span><a class="reference internal image-reference" href="_images/手机USB共享上网.png"><img alt="alternate text" class="align-center" src="_images/手机USB共享上网.png" style="width: 399.0px; height: 427.0px;" /></a>
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id22">
 <h3>手机USB共享上网<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>手机USB共享上网</li>
 </ul>
+<div id="usb-tethering-modem_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id23">
-<h2>带宽使用图<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-bandwidth-usage(带宽使用图)">
+<span id="id23"></span><h2>带宽使用图<a class="headerlink" href="#setting-bandwidth-usage(带宽使用图)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon2.png"><img alt="alternate text" class="align-center" src="_images/icon2.png" style="width: 135.0px; height: 109.0px;" /></a>
 <span class="target" id="setting-bandwidth-usage(带宽使用图)"></span><p>带宽使用图用于展示一定时间频段内带宽的使用情况。本应用分为两部分：</p>
 <div class="section" id="id24">
@@ -475,31 +486,31 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id25">
 <h3>带宽数据表<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/table.png"><img alt="alternate text" class="align-center" src="_images/table.png" style="width: 1211.0px; height: 903.0px;" /></a>
-<span class="target" id="setting-bandwidth-usage(带宽使用图)"></span></div>
+<div id="bandwidth-usage_comment_container" class="comment-container"></div></div>
 </div>
-<div class="section" id="vlan">
-<h2>交换机VLan<a class="headerlink" href="#vlan" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-vlan(交换机VLan)">
+<span id="vlan"></span><h2>交换机VLan<a class="headerlink" href="#setting-vlan(交换机VLan)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/交换机VLan.png"><img alt="alternate text" class="align-center" src="_images/交换机VLan.png" style="width: 971.0px; height: 368.0px;" /></a>
-<span class="target" id="setting-vlan(交换机VLan)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id26">
 <h3>交换机VLan<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>交换机VLan</li>
 </ul>
+<div id="vlan_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id27">
-<h2>网速测试<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-speed-test(网速测试)">
+<span id="id27"></span><h2>网速测试<a class="headerlink" href="#setting-speed-test(网速测试)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/网速测试.png"><img alt="alternate text" class="align-center" src="_images/网速测试.png" style="width: 880.0px; height: 888.0px;" /></a>
-<span class="target" id="setting-speed-test(网速测试)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id28">
 <h3>网速测试<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>网速测试</li>
 </ul>
-</div>
+<div id="speed-test_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="adbyby">
 <h2>安全版Adbyby<a class="headerlink" href="#adbyby" title="Permalink to this headline">¶</a></h2>
@@ -507,9 +518,9 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <span class="target" id="setting-adbyby-save(安全版Adbyby)"></span><p>Adbyby广告屏蔽大师可以全面过滤各种横幅、弹窗、视频广告，同时阻止跟踪、隐私窃取及各种恶意网站。</p>
 <a class="reference internal image-reference" href="_images/安全版Adbyby.png"><img alt="alternate text" class="align-center" src="_images/安全版Adbyby.png" style="width: 256.0px; height: 104.0px;" /></a>
 <span class="target" id="setting-adbyby-save(安全版Adbyby)"></span><p>通过点击 状态 标签后的开关按钮就可开启Adbyby。</p>
-</div>
-<div class="section" id="dns-cdn">
-<h2>DNS CDN 加速<a class="headerlink" href="#dns-cdn" title="Permalink to this headline">¶</a></h2>
+<div id="adbyby-save_comment_container" class="comment-container"></div></div>
+<div class="section" id="setting-dns-cdn(DNS CDN 加速)">
+<span id="dns-cdn"></span><h2>DNS CDN 加速<a class="headerlink" href="#setting-dns-cdn(DNS CDN 加速)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon4.png"><img alt="alternate text" class="align-center" src="_images/icon4.png" style="width: 160.0px; height: 112.0px;" /></a>
 <span class="target" id="setting-dns-cdn(DNS CDN 加速)"></span><p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
@@ -520,10 +531,10 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id30">
 <h3>设置DNS CDN<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/设置.png"><img alt="alternate text" class="align-center" src="_images/设置.png" style="width: 664.0px; height: 302.0px;" /></a>
-<span class="target" id="setting-dns-cdn(DNS CDN 加速)"></span></div>
+<div id="dns-cdn_comment_container" class="comment-container"></div></div>
 </div>
-<div class="section" id="id31">
-<h2>带宽分布图<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-bandwidth-distribution(带宽分布图)">
+<span id="id31"></span><h2>带宽分布图<a class="headerlink" href="#setting-bandwidth-distribution(带宽分布图)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon5.png"><img alt="alternate text" class="align-center" src="_images/icon5.png" style="width: 127.0px; height: 119.0px;" /></a>
 <span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span><p>宽带分布图 应用，用于显示一定时间段内宽带数据的流向分布。
 本应用分为两部分：</p>
@@ -541,74 +552,74 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id33">
 <h3>数据表<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/table1.png"><img alt="alternate text" class="align-center" src="_images/table1.png" style="width: 1177.0px; height: 339.0px;" /></a>
-<span class="target" id="setting-bandwidth-distribution(带宽分布图)"></span></div>
+<div id="bandwidth-distribution_comment_container" class="comment-container"></div></div>
 </div>
-<div class="section" id="id34">
-<h2>负载均衡<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-mwan3(负载均衡)">
+<span id="id34"></span><h2>负载均衡<a class="headerlink" href="#setting-mwan3(负载均衡)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/负载均衡.png"><img alt="alternate text" class="align-center" src="_images/负载均衡.png" style="width: 919.0px; height: 1657.0px;" /></a>
-<span class="target" id="setting-mwan3(负载均衡)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id35">
 <h3>负载均衡<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>负载均衡</li>
 </ul>
+<div id="mwan3_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id36">
-<h2>连接列表<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-conntrack(连接列表)">
+<span id="id36"></span><h2>连接列表<a class="headerlink" href="#setting-conntrack(连接列表)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon6.png"><img alt="alternate text" class="align-center" src="_images/icon6.png" style="width: 95.0px; height: 106.0px;" /></a>
 <span class="target" id="setting-conntrack(连接列表)"></span><p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <a class="reference internal image-reference" href="_images/连接列表.png"><img alt="alternate text" class="align-center" src="_images/连接列表.png" style="width: 921.0px; height: 563.0px;" /></a>
-<span class="target" id="setting-conntrack(连接列表)"></span></div>
-<div class="section" id="shadowsocks">
-<h2>Shadowsocks<a class="headerlink" href="#shadowsocks" title="Permalink to this headline">¶</a></h2>
+<div id="conntrack_comment_container" class="comment-container"></div></div>
+<div class="section" id="setting-shadowsocks(Shadowsocks)">
+<span id="shadowsocks"></span><h2>Shadowsocks<a class="headerlink" href="#setting-shadowsocks(Shadowsocks)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/Shadowsocks.png"><img alt="alternate text" class="align-center" src="_images/Shadowsocks.png" style="width: 977.0px; height: 1700.0px;" /></a>
-<span class="target" id="setting-shadowsocks(Shadowsocks)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id37">
 <h3>Shadowsocks<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Shadowsocks</li>
 </ul>
+<div id="shadowsocks_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="openvpn">
-<h2>OpenVPN<a class="headerlink" href="#openvpn" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-openvpn(OpenVPN)">
+<span id="openvpn"></span><h2>OpenVPN<a class="headerlink" href="#setting-openvpn(OpenVPN)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/OpenVPN.png"><img alt="alternate text" class="align-center" src="_images/OpenVPN.png" style="width: 910.0px; height: 1018.0px;" /></a>
-<span class="target" id="setting-openvpn(OpenVPN)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id38">
 <h3>OpenVPN<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>OpenVPN</li>
 </ul>
+<div id="openvpn_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="ping">
-<h2>Ping守护<a class="headerlink" href="#ping" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-ping-watchdog(Ping守护)">
+<span id="ping"></span><h2>Ping守护<a class="headerlink" href="#setting-ping-watchdog(Ping守护)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/Ping守护.png"><img alt="alternate text" class="align-center" src="_images/Ping守护.png" style="width: 560.0px; height: 380.0px;" /></a>
-<span class="target" id="setting-ping-watchdog(Ping守护)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id39">
 <h3>Ping守护<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Ping守护</li>
 </ul>
+<div id="ping-watchdog_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="shadowvpn">
-<h2>ShadowVPN<a class="headerlink" href="#shadowvpn" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-shadowvpn(ShadowVPN)">
+<span id="shadowvpn"></span><h2>ShadowVPN<a class="headerlink" href="#setting-shadowvpn(ShadowVPN)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/ShadowVPN.png"><img alt="alternate text" class="align-center" src="_images/ShadowVPN.png" style="width: 670.0px; height: 663.0px;" /></a>
-<span class="target" id="setting-shadowvpn(ShadowVPN)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id40">
 <h3>ShadowVPN<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>ShadowVPN</li>
 </ul>
-</div>
+<div id="shadowvpn_comment_container" class="comment-container"></div></div>
 </div>
 </div>
 
@@ -676,7 +687,10 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
+  
    
+  <script type="text/javascript" src="_static/js/comments.js"></script>
+
 
 </body>
 </html>

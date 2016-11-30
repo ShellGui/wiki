@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="icon"
+   style=""
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   p-id="3283"
+   width="16"
+   height="16"
+   id="svg3049"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="confused.svg">
+  <metadata
+     id="metadata3059">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="649"
+     inkscape:window-height="480"
+     id="namedview3057"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-x="680"
+     inkscape:window-y="247"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3049" />
+  <defs
+     id="defs3051">
+    <style
+       type="text/css"
+       id="style3053" />
+  </defs>
+  <path
+     d="M512 1024c282.784 0 512-229.216 512-512s-229.216-512-512-512-512 229.216-512 512 229.216 512 512 512zM512 96c229.76 0 416 186.24 416 416s-186.24 416-416 416-416-186.24-416-416 186.24-416 416-416zM256 320c0-35.36 28.64-64 64-64s64 28.64 64 64c0 35.36-28.64 64-64 64s-64-28.64-64-64zM640 320c0-35.36 28.64-64 64-64s64 28.64 64 64c0 35.36-28.64 64-64 64s-64-28.64-64-64zM726.112 640l64.864 0c9.248 72.512-32.448 144.544-103.968 170.56-82.912 30.176-174.912-12.704-205.088-95.616-18.112-49.76-73.312-75.488-123.04-57.376-45.568 16.576-70.944 64.288-60.992 110.432l-64.864 0c-9.248-72.512 32.448-144.544 103.968-170.56 82.912-30.176 174.912 12.704 205.088 95.616 18.112 49.76 73.312 75.488 123.04 57.376 45.568-16.576 70.944-64.288 60.992-110.432z"
+     p-id="3284"
+     id="path3055"
+     style="fill:#666" />
+</svg>

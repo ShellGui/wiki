@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?v94okd');
+  src:  url('fonts/icomoon.eot?v94okd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v94okd') format('truetype'),
+    url('fonts/icomoon.woff?v94okd') format('woff'),
+    url('fonts/icomoon.svg?v94okd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hooray:before {
+  content: "\e900";
+}
+.icon-laugh:before {
+  content: "\e9e9";
+}
+.icon-confused:before {
+  content: "\e9fb";
+}
+.icon-heart:before {
+  content: "\e901";
+}
+.icon-minue:before {
+  content: "\e902";
+}
+.icon-plus:before {
+  content: "\e903";
+}
+
+/*     custome     */
+.comment-reactions {
+  color: #666;
+}
+.comment-reactions:hover {
+  text-decoration: none;
+  color: #333;
+}
+.reaction-count {
+  display: inline-block;
+  padding: 0 15px 0 5px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+.media {
+  max-width: 100%;
+  overflow: auto;
+}
+.comment-container {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #666;
+}
+.comment-container li {
+	margin: 0!important;
+	border: none;
+}
+.comment-container .media-left img {
+	min-width: 60px!important;
+	min-height: 60px!important;
+}

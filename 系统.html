@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -32,7 +33,17 @@
   
     <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
         <link rel="next" title="网络类应用" href="网络.html"/>
-        <link rel="prev" title="从这里开始" href="gettingstarted.html"/> 
+        <link rel="prev" title="从这里开始" href="gettingstarted.html"/>
+ 
+  <link rel="stylesheet" href="_static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_static/css/comments.css">
+  <link rel="stylesheet" href="_static/css/highlight.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'XXX account number XXX']);
+  _gaq.push(['_trackPageview']);
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -96,33 +107,33 @@
 <li class="toctree-l3"><a class="reference internal" href="#id9">防火墙</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#telnet">Telnet 服务</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-telnetd(Telnet 服务)">Telnet 服务</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id10">启用</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id11">端口</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">固件升级</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-firmware(固件升级)">固件升级</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id13">恢复出厂设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id14">升级固件</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id15">消息</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-notice(消息)">消息</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id16">消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id17">电子邮件设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id18">抄送</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id19">电子邮件测试</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id20">磁盘管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-disk(磁盘管理)">磁盘管理</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id21">磁盘管理</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id22">系统信息</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-sysinfo(系统信息)">系统信息</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id23">系统信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id24">时间设置</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id25">系统用户</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-sysusers(系统用户)">系统用户</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id26">系统用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id27">编辑用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id28">编辑用户组</a></li>
@@ -204,7 +215,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <li>编辑带宽</li>
 </ul>
 <a class="reference internal image-reference" href="_images/编辑带宽.png"><img alt="alternate text" class="align-center" src="_images/编辑带宽.png" style="width: 505.0px; height: 591.0px;" /></a>
-</div>
+<div id="status_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="setting-home(应用程序)">
 <span id="id5"></span><h2>应用程序<a class="headerlink" href="#setting-home(应用程序)" title="Permalink to this headline">¶</a></h2>
@@ -238,12 +249,12 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>防火墙类型</li>
 </ul>
+<div id="home_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="telnet">
-<h2>Telnet 服务<a class="headerlink" href="#telnet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-telnetd(Telnet 服务)">
+<span id="telnet"></span><h2>Telnet 服务<a class="headerlink" href="#setting-telnetd(Telnet 服务)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/Telnet-服务基础设置.png"><img alt="alternate text" class="align-center" src="_images/Telnet-服务基础设置.png" style="width: 449.0px; height: 189.0px;" /></a>
-<span class="target" id="setting-telnetd(Telnet 服务)"></span><p>启用后即可进行远程控制</p>
+<p>启用后即可进行远程控制</p>
 <div class="section" id="id10">
 <h3>启用<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -256,12 +267,12 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <ul class="simple">
 <li>端口</li>
 </ul>
+<div id="telnetd_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id12">
-<h2>固件升级<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-firmware(固件升级)">
+<span id="id12"></span><h2>固件升级<a class="headerlink" href="#setting-firmware(固件升级)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/固件升级.png"><img alt="alternate text" class="align-center" src="_images/固件升级.png" style="width: 789.0px; height: 411.0px;" /></a>
-<span class="target" id="setting-firmware(固件升级)"></span><p>支持恢复出厂设置 和 升级固件,按照需要,进入子页面进行设置,需要刷机,请直接上传固件.</p>
+<p>支持恢复出厂设置 和 升级固件,按照需要,进入子页面进行设置,需要刷机,请直接上传固件.</p>
 <div class="section" id="id13">
 <h3>恢复出厂设置<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/恢复出厂设置.png"><img alt="alternate text" class="align-center" src="_images/恢复出厂设置.png" style="width: 746.0px; height: 411.0px;" /></a>
@@ -271,12 +282,12 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <h3>升级固件<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/固件可用-是否刷机.png"><img alt="alternate text" class="align-center" src="_images/固件可用-是否刷机.png" style="width: 746.0px; height: 537.0px;" /></a>
 <p>可以选择你所需要的文件进行保存,刷机后,该文件将保持原样.</p>
+<div id="firmware_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id15">
-<h2>消息<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-notice(消息)">
+<span id="id15"></span><h2>消息<a class="headerlink" href="#setting-notice(消息)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/消息.png"><img alt="alternate text" class="align-center" src="_images/消息.png" style="width: 746.0px; height: 529.0px;" /></a>
-<span class="target" id="setting-notice(消息)"></span><p>从消息中获取系统操作时间点，点击处理可跳转到此消息对应的页面上</p>
+<p>从消息中获取系统操作时间点，点击处理可跳转到此消息对应的页面上</p>
 <div class="section" id="id16">
 <h3>消息<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -297,40 +308,40 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <h3>电子邮件测试<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/电子邮件测试.png"><img alt="alternate text" class="align-center" src="_images/电子邮件测试.png" style="width: 880.0px; height: 400.0px;" /></a>
 <p>将发送一个测试邮件到你指定的邮箱</p>
+<div id="notice_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id20">
-<h2>磁盘管理<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-disk(磁盘管理)">
+<span id="id20"></span><h2>磁盘管理<a class="headerlink" href="#setting-disk(磁盘管理)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/磁盘管理.png"><img alt="alternate text" class="align-center" src="_images/磁盘管理.png" style="width: 758.0px; height: 290.0px;" /></a>
-<span class="target" id="setting-disk(磁盘管理)"></span><p>点击生效和应用后可挂载外用U盘</p>
+<p>点击生效和应用后可挂载外用U盘</p>
 <div class="section" id="id21">
 <h3>磁盘管理<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>磁盘管理</li>
 </ul>
+<div id="disk_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id22">
-<h2>系统信息<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-sysinfo(系统信息)">
+<span id="id22"></span><h2>系统信息<a class="headerlink" href="#setting-sysinfo(系统信息)" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id23">
 <h3>系统信息<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/系统信息.png"><img alt="alternate text" class="align-center" src="_images/系统信息.png" style="width: 471.0px; height: 1335.0px;" /></a>
-<span class="target" id="setting-sysinfo(系统信息)"></span><p>更改主机名点击应用重启后生效</p>
+<p>更改主机名点击应用重启后生效</p>
 </div>
 <div class="section" id="id24">
 <h3>时间设置<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/时间设置.png"><img alt="alternate text" class="align-center" src="_images/时间设置.png" style="width: 993.0px; height: 599.0px;" /></a>
 <span class="target" id="setting-sysinfo(时间设置)"></span><p>更改时间设置点击应用重启后生效</p>
+<div id="sysinfo_comment_container" class="comment-container"></div></div>
 </div>
-</div>
-<div class="section" id="id25">
-<h2>系统用户<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-sysusers(系统用户)">
+<span id="id25"></span><h2>系统用户<a class="headerlink" href="#setting-sysusers(系统用户)" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id26">
 <h3>系统用户<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>系统用户</li>
 </ul>
-<span class="target" id="setting-sysusers(系统用户)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <a class="reference internal image-reference" href="_images/系统用户.png"><img alt="alternate text" class="align-center" src="_images/系统用户.png" style="width: 303.0px; height: 267.0px;" /></a>
 </div>
@@ -375,7 +386,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <li>添加用户组</li>
 </ul>
 <a class="reference internal image-reference" href="_images/添加用户组.png"><img alt="alternate text" class="align-center" src="_images/添加用户组.png" style="width: 620.0px; height: 340.0px;" /></a>
-</div>
+<div id="sysusers_comment_container" class="comment-container"></div></div>
 </div>
 </div>
 
@@ -443,7 +454,10 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
+  
    
+  <script type="text/javascript" src="_static/js/comments.js"></script>
+
 
 </body>
 </html>

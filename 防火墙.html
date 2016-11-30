@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -31,7 +32,17 @@
 
   
     <link rel="top" title="ShellGui 手册 0.1 documentation" href="index.html"/>
-        <link rel="prev" title="网络类应用" href="网络.html"/> 
+        <link rel="prev" title="网络类应用" href="网络.html"/>
+ 
+  <link rel="stylesheet" href="_static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="_static/css/comments.css">
+  <link rel="stylesheet" href="_static/css/highlight.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'XXX account number XXX']);
+  _gaq.push(['_trackPageview']);
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -85,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="系统.html">系统类应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="网络.html">网络类应用</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">防火墙类应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">防火墙附加</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-firewall-extra(防火墙附加)">防火墙附加</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#syn-flood">SYN flood 保护</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wan">Wan 基础设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#geoip">GEOIP数据库</a></li>
@@ -160,10 +171,10 @@
             
   <div class="section" id="id1">
 <h1>防火墙类应用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id2">
-<h2>防火墙附加<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-firewall-extra(防火墙附加)">
+<span id="id2"></span><h2>防火墙附加<a class="headerlink" href="#setting-firewall-extra(防火墙附加)" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/icon7.png"><img alt="alternate text" class="align-center" src="_images/icon7.png" style="width: 124.0px; height: 115.0px;" /></a>
-<span class="target" id="setting-firewall-extra(防火墙附加)"></span><p>This chapter lists the backwards incompatible changes introduced in
+<p>This chapter lists the backwards incompatible changes introduced in
 Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="syn-flood">
 <h3>SYN flood 保护<a class="headerlink" href="#syn-flood" title="Permalink to this headline">¶</a></h3>
@@ -176,7 +187,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="geoip">
 <h3>GEOIP数据库<a class="headerlink" href="#geoip" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/geoip.png"><img alt="alternate text" class="align-center" src="_images/geoip.png" style="width: 983.0px; height: 386.0px;" /></a>
-</div>
+<div id="firewall-extra_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="id3">
 <h2>局域网上网记录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -201,7 +212,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <div class="section" id="id8">
 <h3>搜索记录<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/keyword.png"><img alt="alternate text" class="align-center" src="_images/keyword.png" style="width: 1157.0px; height: 137.0px;" /></a>
-</div>
+<div id="lan-net-record_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="setting-qos-shellgui(QOS流控)">
 <span id="qos"></span><h2>QOS流控<a class="headerlink" href="#setting-qos-shellgui(QOS流控)" title="Permalink to this headline">¶</a></h2>
@@ -213,7 +224,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <li>QOS流控</li>
 </ul>
 <a class="reference internal image-reference" href="_images/QOS流控.png"><img alt="alternate text" class="align-center" src="_images/QOS流控.png" style="width: 953.0px; height: 655.0px;" /></a>
-</div>
+<div id="qos-shellgui_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="setting-quotas(流量配额)">
 <span id="id10"></span><h2>流量配额<a class="headerlink" href="#setting-quotas(流量配额)" title="Permalink to this headline">¶</a></h2>
@@ -281,7 +292,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <p>可以通过设置主机显示规则显示IP地址或主机名</p>
 <p>通过设置使用情况显示格式，可以查看当前流量使用的百分比，当前已用流量和总的设定流量等。</p>
 <a class="reference internal image-reference" href="_images/使用情况表.png"><img alt="alternate text" class="align-center" src="_images/使用情况表.png" style="width: 969.0px; height: 171.0px;" /></a>
-</div>
+<div id="quotas_comment_container" class="comment-container"></div></div>
 </div>
 <div class="section" id="setting-restriction(访问限制)">
 <span id="id13"></span><h2>访问限制<a class="headerlink" href="#setting-restriction(访问限制)" title="Permalink to this headline">¶</a></h2>
@@ -330,7 +341,7 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
 <a class="reference internal image-reference" href="_images/例外表单.png"><img alt="alternate text" class="align-center" src="_images/例外表单.png" style="width: 593.0px; height: 328.0px;" /></a>
 <p>白名单规则表单的填写与黑名单规则基本一致，只是应用范围是作为新建规则的例外存在的，这实际上与设置黑名单时将应用范围设置为&#8217;除了主机列表之外的所有主机&#8217; 效果是一样的。
 用户需按实际需要进行设置。</p>
-</div>
+<div id="restriction_comment_container" class="comment-container"></div></div>
 </div>
 </div>
 
@@ -396,7 +407,10 @@ Shellgui 2.0, and the steps that are needed for upgrading your code.</p>
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
+  
    
+  <script type="text/javascript" src="_static/js/comments.js"></script>
+
 
 </body>
 </html>
