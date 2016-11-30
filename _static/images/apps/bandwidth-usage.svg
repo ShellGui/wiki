@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="64" height="64" id="bandwidth_usage">
+<g transform="scale(0.32,0.32)">
+  <g transform="translate(100,100)">
+		<g transform="translate(-100,-100)">
+		  <path id="usage_back" opacity="0" class="svg_fill" d="M164.5,160l-119-1.5c9-42,22-56.5,43-34c20.574,22.044,6.354-21.516,27-37
+			c11.906-8.93,39.563-5.062,48.786-45.047c0.072-0.315,0.144-0.633,0.214-0.953V160z"></path>
+		  <polyline fill="none" class="svg_stroke" stroke-width="10" points="35,40 35,160 175,160 "></polyline>
+		  <path id="usage_line" fill="none" class="svg_stroke" stroke-width="6" d="M45.5,158.5c9-42,22-56.5,43-34c20.574,22.044,6.354-21.516,27-37
+			c12-9,40-5,49-46" stroke-dasharray=""></path>
+		</g>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="64" height="64" id="ping_watchdog">
+<g transform="scale(0.32,0.32)">
+  <g transform="translate(100,100) scale(1.1,1.1)">
+	<g transform="translate(-100,-100)">
+	  <path class="svg_fill" d="M118.624,145.216c11.696,4.248,19.144,12.24,19.144,21.288H60.632c0-9.048,7.984-17.04,20.216-21.288
+		c-22.336-7.983-38.304-29.264-38.304-54.272c0-31.92,25.536-57.464,57.456-57.464s57.456,25.536,57.456,57.464
+		C157.456,115.96,141.504,137.24,118.624,145.216L118.624,145.216z"></path>
+	  <g id="blink_points" fill="white" stroke="none" opacity="1">
+		<circle cx="86" cy="160" r="5"></circle>
+		<circle cx="96" cy="160" r="5"></circle>
+	  </g>
+	  <g id="watch_group" stroke="none" transform="translate(0,0)">
+		<circle id="watch_big" cx="100" cy="105" r="30" fill="white"></circle>
+		<circle id="watch_sm" cx="100" cy="105" r="15" class="svg_fill"></circle>
+	  </g>
+	</g>
+  </g>
+</g>
+</svg>

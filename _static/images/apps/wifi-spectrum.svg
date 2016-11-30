@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="64" height="64" id="wifi_spectrum">
+<g transform="scale(0.32,0.32)">
+  <g transform="translate(100,100)">
+	<g transform="translate(-100,-100)">
+	  <polyline fill="none" class="svg_stroke" stroke-width="10" points="35,40 35,160 175,160 "></polyline>
+	  <path id="spec_back_dash" d="M 40,160 q 50,-250 100,0l100,0" stroke="none" class="svg_fill" opacity="0.5"></path>
+	  <path id="spec_back_solid" d="M 60,160 q 55,-150 110,0l110,0" stroke="none" class="svg_fill" opacity="0.5"></path>
+	  <path id="spec_line_dash" d="M 40,160 q 50,-250 100,0" class="svg_stroke" stroke-width="6" fill="none" stroke-dasharray="15"></path>
+	  <path id="spec_line_solid" d="M 60,160 q 55,-150 110,0" class="svg_stroke" stroke-width="6" fill="none"></path>
+	</g>
+  </g>
+</g>
+</svg>

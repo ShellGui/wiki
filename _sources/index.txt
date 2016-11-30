@@ -42,6 +42,7 @@ ShellGui 开源部分的代码使用 `MIT license`_; 查看该协议的详细信
 .. toctree::
    :maxdepth: 2
 
+   返回官网 <http://www.shellgui.com>
    gettingstarted
    apps-base
    系统
