@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+	<g transform="translate(100,100)">
+		<defs>
+			<mask id="angle_mask">
+				<g transform="rotate(-90)">
+					<rect x="-100" y="-100" width="200" height="200" fill="black"></rect>
+					<rect x="0" y="0" width="100" height="100" fill="white"></rect>
+					<rect x="0" y="0" width="100" height="100" fill="white" transform="rotate(10)"></rect>
+				</g>
+			</mask>
+		</defs>
+		<circle cx="0" cy="0" r="80" fill="#34495E" stroke="none"></circle>
+		<circle cx="0" cy="0" r="80" fill="#ccc" stroke="none" mask="url(#angle_mask)"></circle>
+		<line transform="rotate(-90)" x1="-4" x2="80" y1="0" y2="0" stroke="white" stroke-width="8"></line>
+		<line transform="rotate(10)" x1="-4" x2="80" y1="0" y2="0" stroke="white" stroke-width="8"></line>
+	</g>		
+</svg>

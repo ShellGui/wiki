@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+	<g id="" transform="translate(100,100)">
+    <defs>
+      <mask id="gear-mask">
+        <rect x="-100" y="-100" width="200" height="200" fill="white"></rect>
+        <g fill="black">
+          <polygon points="60,-6 60,6 85,24 85,-24"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(45)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(90)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(135)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(180)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(225)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(270)"></polygon>
+          <polygon points="60,-6 60,6 85,24 85,-24" transform="rotate(315)"></polygon>
+        </g>
+      </mask>
+    </defs>
+    <circle cx="0" cy="0" r="80" fill="#34495E" stroke="none" mask="url(#gear-mask)"></circle>
+    <circle id="" cx="0" cy="0" r="30" fill="white" stroke="none"></circle>
+  </g>
+</svg>
